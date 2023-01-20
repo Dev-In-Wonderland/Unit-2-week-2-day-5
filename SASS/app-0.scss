@@ -619,18 +619,27 @@ h2 {
 }
 
 
-
+@mixin toggle($gray-special) {
+  background-color: $gray-special !important;
+	background-image: none;
+	color: $third-red-special !important;
+} ;
 
 
 .body{
-	background-color: $special-gray !important;
-	background-image: none;
-	color: $third-red-special !important;
+	
+  @include toggle($special-gray)
 }
 
 
-.footerdark{
-	background-color: $second-special-gray !important;
+@mixin footerdark($super-gray){
+
+  background-color: $super-gray !important;
 	color: $third-red-special !important;
 
+};
+
+.footerdark{
+	
+@include footerdark($second-special-gray)
 }
