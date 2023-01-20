@@ -118,23 +118,22 @@
 >
 
   
-  <div class="mt-2  col mb-4">
-	<div class="card bg-primary mt-2 h-100 border border-primary h-100">
-	  <img id="offerta" class="h-100 rounded-circle"
+  <div class=" mt-2  col mb-4">
+	<div class="dark-mode card bg-primary mt-2 h-100 border border-primary h-100">
+	  <img id="offerta" class="dark-mode h-100 rounded-circle"
 		src="https://www.foodserviceweb.it/wp-content/uploads/sites/4/2022/12/fs-sitonl-24-copia-2-1.png"
 		
-		class=""
 		alt="picture"
 	  />
-	  <div class="card-body bg-primary d-flex flex-column justify-content-between">
-		<h2 class="card-title fs-1 text-center">Crash Burgez</h2>
-          <div class="card-text text-center">
+	  <div class="dark-mode card-body bg-primary d-flex flex-column justify-content-between">
+		<h2 class=" card-title fs-1 text-center">Crash Burgez</h2>
+          <div class="dark-mode card-text text-center">
            
-           <p class="fs-2">da 7,40 €</p> 
-           <p class="fs-3">carne, cheddar, cipolla grigliata, cetriolini, bacon, salsa Barbecue, misura a scelta tra single, double o triple</p> 
+           <p class="dark-mode fs-2">da 7,40 €</p> 
+           <p class="dark-mode fs-3">carne, cheddar, cipolla grigliata, cetriolini, bacon, salsa Barbecue, misura a scelta tra single, double o triple</p> 
            
           </div>
-		<a href="#" class="fs-3 btn btn-primary">ADD TO CART</a>
+		<a href="#" class="dark-mode fs-3 btn btn-primary">ADD TO CART</a>
 	  </div>
 	</div>
   </div>
@@ -262,14 +261,14 @@
 <div id="partnership" class=" container d-none d-sm-none d-md-block d-md-block d-lg-block d-xl-block mt-4 mb-5">
 
 	<div id="accordion ">
-	  <div class="card">
-		<div class="card-header d-flex flex-row justify-content-between align-items-center w-100" id="headingThree">
+	  <div class="card dark-mode">
+		<div class="dark-mode card-header d-flex flex-row justify-content-between align-items-center w-100" id="headingThree">
 	
 			<h2>Partenership</h2>
 	
 	
 		  <h2 class="mb-0">
-			<button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+			<button class=" btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 			  Mostra/Nascondi sezione
 			</button>
 		</h2>
@@ -407,11 +406,15 @@
 
 
 
-<footer class="d-flex flex-column justufy-content-center align-items-center">
+<footer class="footerdark d-flex flex-column justufy-content-center align-items-center">
 	<a href="#">&copy; Tutti i diritti sono riservati</a>
 	
 	<p class="m-0 d-flex align-items-center"><ion-icon class="text-light" name="mail-outline"></ion-icon><a href="mailto:bullsrestaurant@gmail.com">bullsrestaurant@gmail.com</a></p>
 </footer>
+
+
+
+
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -434,16 +437,26 @@ pause: true, interval: 2500,
 
 
 	button.addEventListener('click', () => {
-		body.classList.toggle('body')
+		body.classList.toggle('footerdark')
 	})
 
 	let button1 = document.querySelector('button')
-	let body1 = document.querySelector('link-food')
+	let body1 = document.querySelector('footer')
 
 
 
 	button1.addEventListener('click', () => {
 		body1.classList.toggle('body')
+	})
+
+
+	let button2 = document.querySelector('button')
+	let body2 = document.querySelector('body')
+
+
+
+	button2.addEventListener('click', () => {
+		body2.classList.toggle('body')
 	})
 </script>
 </body>
