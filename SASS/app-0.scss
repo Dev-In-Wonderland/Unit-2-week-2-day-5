@@ -490,12 +490,25 @@ footer {
 
   bottom: $reset;
   margin: $reset;
+
+
+//  footer a, footer p {
+//   text-decoration: none !important; 
+//   color: #fff !important;
+// }
+
+
+
 }
 
-footer a {
-  text-decoration: none;
-  color: #fff;
+ footer p {
+  color: #fff !important;
 }
+ footer a {
+  text-decoration: none !important; 
+  color: #fff !important;
+}
+
 
 #partnership h2 {
   margin: $reset !important;
@@ -636,6 +649,7 @@ h2 {
 
   background-color: $super-gray !important;
 	color: $third-red-special !important;
+  width: $full
 
 };
 
