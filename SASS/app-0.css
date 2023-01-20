@@ -1,15 +1,69 @@
 @charset "UTF-8";
 /* CSS Document */
 /* -------------reset----------------*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, font, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -19,7 +73,8 @@ table, caption, tbody, tfoot, thead, tr, th, td, video {
   background: transparent;
 }
 
-input:focus, button:focus {
+input:focus,
+button:focus {
   outline: 0;
 }
 
@@ -35,7 +90,8 @@ ul li {
   list-style: none;
 }
 
-html, body {
+html,
+body {
   font-family: "Roboto Slab", serif;
   color: #666;
   height: 100%;
@@ -62,7 +118,7 @@ h1 {
   font-size: 1.5em;
   text-align: left;
   font-weight: bold;
-  color: #A24038 !important;
+  color: #a24038 !important;
 }
 
 /* -----------------contenitore e contenuto ------------------ */
@@ -77,29 +133,29 @@ h1 {
 }
 
 .contenitore .contenuto a {
-  color: #A24038;
+  color: #a24038;
   text-decoration: underline;
   font-weight: bold;
 }
 
 .contenitore .contenuto a:hover {
-  color: #B3453E;
+  color: #b3453e;
 }
 
 /* -----------------Menu nella versione mobile-----------------*/
 .active {
-  color: #FFFFFF;
-  background-color: #B3453E;
+  color: #ffffff;
+  background-color: #b3453e;
 }
 
 .active-dropdown {
-  color: #FFFFFF;
-  background-color: #B3453E;
+  color: #ffffff;
+  background-color: #b3453e;
 }
 
 nav {
   height: 100%;
-  background-color: #A24038; /* primary lightcolor* /* sfondo menu mobile*/
+  background-color: #a24038; /* primary lightcolor* /* sfondo menu mobile*/
   position: fixed;
   width: 50%;
   margin-top: 54px;
@@ -120,7 +176,7 @@ nav ul li a {
 }
 
 .submenu {
-  color: #FF6759;
+  color: #ff6759;
   padding-left: 55px;
   padding-bottom: 5px;
 }
@@ -137,7 +193,7 @@ nav ul li ul li a {
 }
 
 .lingua {
-  border-top: 1px solid #B3453E;
+  border-top: 1px solid #b3453e;
 }
 
 .lingua > a::before {
@@ -147,7 +203,7 @@ nav ul li ul li a {
 
 /* ----------------- div bar per l'attivazione del menu ------------------ */
 #bar {
-  background-color: #A24038;
+  background-color: #a24038;
   height: 54px;
   width: 100%;
   z-index: 2;
@@ -186,7 +242,8 @@ nav ul li ul li a {
   transition-delay: 0.1s;
 }
 
-.menuicon span::after, .menuicon span::before {
+.menuicon span::after,
+.menuicon span::before {
   display: block;
   content: "";
   position: absolute;
@@ -261,11 +318,11 @@ nav ul li ul li a {
   }
   .active {
     background-color: transparent;
-    color: #FF6759;
+    color: #ff6759;
   }
   .active-dropdown {
     color: #fff;
-    background-color: #B3453E;
+    background-color: #b3453e;
   }
   nav ul {
     padding: 0;
@@ -278,11 +335,11 @@ nav ul li ul li a {
   }
   nav ul li a:hover {
     background-color: transparent;
-    color: #FF6759;
+    color: #ff6759;
   }
   .submenu {
     padding-left: 0;
-    color: #FFFFFF;
+    color: #ffffff;
   }
   nav ul li {
     margin: 0;
@@ -300,7 +357,7 @@ nav ul li ul li a {
     position: fixed;
     height: 0;
     overflow: hidden;
-    background-color: #A24038;
+    background-color: #a24038; /* primary color*/
   }
   nav ul li:hover ul {
     height: auto;
@@ -314,18 +371,18 @@ nav ul li ul li a {
     float: none;
     padding: 0;
     min-width: 160px;
-    border-top: 1px solid #B3453E;
+    border-top: 1px solid #b3453e;
   }
   nav ul li ul li a {
     padding: 16px 32px;
     display: block;
-    background-color: #A24038;
+    background-color: #a24038;
     color: #ffffff;
     font-weight: normal;
   }
   nav ul li ul li a:hover {
-    background-color: #B3453E;
-    color: #FF6759;
+    background-color: #b3453e;
+    color: #ff6759;
     transform: scale(1.2);
   }
   .lingua {
@@ -378,7 +435,7 @@ nav ul li ul li a {
 }
 footer {
   width: 100%;
-  background-color: #A24038;
+  background-color: #a24038;
   text-align: center;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -388,7 +445,7 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: #FFF;
+  color: #fff;
 }
 
 #partnership h2 {
@@ -400,8 +457,9 @@ footer a {
   margin-bottom: 3rem !important;
 }
 
-#title, h2 {
-  color: #A24038 !important;
+#title,
+h2 {
+  color: #a24038 !important;
   font-weight: 800 !important;
 }
 
