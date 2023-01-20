@@ -643,3 +643,8 @@ h2 {
 	
 @include footerdark($second-special-gray)
 }
+
+
+.shadow{
+  box-shadow: 50px 50px 50px #000 !important;
+}
