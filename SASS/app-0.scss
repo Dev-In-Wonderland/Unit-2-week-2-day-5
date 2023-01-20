@@ -1,8 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
-
-$red-special: #a24038;
-$second-red-special: #b3453e;
+@import url('colors');
+@import url('measures');
 
 /* -------------reset----------------*/
 html,
@@ -68,11 +67,11 @@ tr,
 th,
 td,
 video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
+  margin: $reset;
+  padding: $reset;
+  border: $reset;
+  outline: $reset;
+  font-size: $full;
   vertical-align: baseline;
   background: transparent;
 }
@@ -98,8 +97,8 @@ html,
 body {
   font-family: "Roboto Slab", serif;
   color: #666 /*color-text*/;
-  height: 100%;
-  width: 100%;
+  height: $full;
+  width: $full;
 }
 
 body {
@@ -149,7 +148,7 @@ h1 {
 /* -----------------Menu nella versione mobile-----------------*/
 
 .active {
-  color: #ffffff /* primary super-lightcolor*/;
+  color: #ffffff  /* primary super-lightcolor*/;
   background-color: $second-red-special /* primary lightcolor*/;
 }
 
@@ -159,7 +158,7 @@ h1 {
 }
 
 nav {
-  height: 100%;
+  height: $full;
   background-color: $red-special; /* primary lightcolor* /* sfondo menu mobile*/
   position: fixed;
   width: 50%;
@@ -173,22 +172,22 @@ nav ul {
 }
 
 nav ul li a {
-  padding: 16px 0 16px 32px;
+  padding: 16px $reset 16px 32px;
   display: block;
-  color: #fbfafa;
+  color: $special-white;
   font-size: 16px;
   transition: background-color 0.3s ease;
 }
 
 .submenu {
-  color: #ff6759 /* primary super-lightcolor*/;
+  color: $third-red-special /* primary super-lightcolor*/;
   padding-left: 55px;
   padding-bottom: 5px;
 }
 
 nav ul li ul {
-  padding-left: 0;
-  padding-bottom: 0;
+  padding-left: $reset;
+  padding-bottom: $reset;
 }
 
 nav ul li ul li a {
@@ -211,7 +210,7 @@ nav ul li ul li a {
 #bar {
   background-color: $red-special /* primary color*/;
   height: 54px;
-  width: 100%;
+  width: $full;
   z-index: 2;
   position: fixed;
   box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.4);
@@ -245,7 +244,7 @@ nav ul li ul li a {
   background-color: #fff;
   position: relative;
   border-radius: 20px;
-  transition-duration: 0;
+  transition-duration: $reset;
   transition-delay: 0.1s;
 }
 
@@ -259,8 +258,8 @@ nav ul li ul li a {
   background-color: #fff;
   border-radius: 20px;
   transition-duration: 0.1s;
-  -webkit-transition-delay: 0.1s, 0;
-  transition-delay: 0.1s, 0;
+  -webkit-transition-delay: 0.1s, $reset;
+  transition-delay: 0.1s, $reset;
 }
 .menuicon span::before {
   margin-top: -10px;
@@ -275,36 +274,36 @@ nav ul li ul li a {
 
 #hamburger:checked ~ .menuicon span::before {
   margin-top: 0px;
-  -webkit-transition-delay: 0, 0.3s;
-  -moz-transition-delay: 0, 0.3s;
-  -ms-transition-delay: 0, 0.3s;
-  -o-transition-delay: 0, 0.3s;
-  transition-delay: 0, 0.3s;
+  -webkit-transition-delay: $reset, 0.3s;
+  -moz-transition-delay: $reset, 0.3s;
+  -ms-transition-delay: $reset, 0.3s;
+  -o-transition-delay: $reset, 0.3s;
+  transition-delay: $reset, 0.3s;
 }
 
 #hamburger:checked ~ .menuicon span::after {
-  margin-top: 0px;
-  -webkit-transition-delay: 0, 0.3s;
-  -moz-transition-delay: 0, 0.3s;
-  -ms-transition-delay: 0, 0.3s;
-  -o-transition-delay: 0, 0.3s;
-  transition-delay: 0, 0.3s;
+  margin-top: $reset;
+  -webkit-transition-delay: $reset, 0.3s;
+  -moz-transition-delay: $reset, 0.3s;
+  -ms-transition-delay: $reset, 0.3s;
+  -o-transition-delay: $reset, 0.3s;
+  transition-delay: $reset, 0.3s;
 }
 
 #hamburger:checked ~ .menuicon span::before {
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
+  -webkit-transform: rotate($rotation-plus);
+  -moz-transform: rotate($rotation-plus);
+  -ms-transform: rotate($rotation-plus);
+  -o-transform: rotate($rotation-plus);
+  transform: rotate($rotation-plus);
 }
 
 #hamburger:checked ~ .menuicon span::after {
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  -webkit-transform: rotate($rotation-minus);
+  -moz-transform: rotate($rotation-minus);
+  -ms-transform: rotate($rotation-minus);
+  -o-transform: rotate($rotation-minus);
+  transform: rotate($rotation-minus);
 }
 
 /* ----------------- menu animation faccio apparire il menu ------------------ */
@@ -345,20 +344,20 @@ nav ul li ul li a {
 
   .active {
     background-color: transparent;
-    color: #ff6759 /* primary super-lightcolor*/;
+    color: $third-red-special /* primary super-lightcolor*/;
   }
 
   .active-dropdown {
     color: #fff;
-    background-color: #b3453e /* primary lightcolor*/;
+    background-color: $second-red-special /* primary lightcolor*/;
   }
 
   nav ul {
-    padding: 0;
+    padding: $reset;
   }
 
   nav ul li a {
-    padding: 0;
+    padding: $reset;
     display: inline;
     font-size: 16px;
     color: #fff;
@@ -366,19 +365,19 @@ nav ul li ul li a {
 
   nav ul li a:hover {
     background-color: transparent;
-    color: #ff6759 /* primary super-lightcolor*/;
+    color: $third-red-special /* primary super-lightcolor*/;
   }
 
   .submenu {
-    padding-left: 0;
+    padding-left: $reset;
     color: #ffffff;
   }
 
   nav ul li {
-    margin: 0;
+    margin: $reset;
     float: left;
     position: relative;
-    padding: 0 16px;
+    padding: $reset 16px;
   }
 
   .submenu::after {
@@ -391,9 +390,9 @@ nav ul li ul li a {
 
   nav ul li ul {
     position: fixed;
-    height: 0;
+    height: $reset;
     overflow: hidden;
-    background-color: #a24038; /* primary color*/
+    background-color: $red-special; /* primary color*/
   }
 
   nav ul li:hover ul {
@@ -407,27 +406,27 @@ nav ul li ul li a {
     font-size: 14px;
     font-weight: normal;
     float: none;
-    padding: 0;
+    padding: $reset;
     min-width: 160px;
-    border-top: 1px solid #b3453e /* primary lightcolor*/;
+    border-top: 1px solid $second-red-special /* primary lightcolor*/;
   }
 
   nav ul li ul li a {
     padding: 16px 32px;
     display: block;
-    background-color: #a24038 /* primary color*/;
+    background-color: $red-special /* primary color*/;
     color: #ffffff;
     font-weight: normal;
   }
 
   nav ul li ul li a:hover {
-    background-color: #b3453e /* primary lightcolor*/;
-    color: #ff6759 /* primary super-lightcolor*/;
+    background-color: $second-red-special /* primary lightcolor*/;
+    color: $third-red-special /* primary super-lightcolor*/;
     transform: scale(1.2);
   }
 
   .lingua {
-    border-top: 0;
+    border-top: $reset;
     border-left: solid 1px #fff;
     float: left;
   }
@@ -483,14 +482,14 @@ nav ul li ul li a {
 }
 
 footer {
-  width: 100%;
-  background-color: #a24038;
+  width: $full;
+  background-color: $red-special;
   text-align: center;
   margin-top: 2em;
   margin-bottom: 2em;
 
-  bottom: 0;
-  margin: 0;
+  bottom: $reset;
+  margin: $reset;
 }
 
 footer a {
@@ -499,25 +498,25 @@ footer a {
 }
 
 #partnership h2 {
-  margin: 0 !important;
+  margin: $reset !important;
 }
 
 #title {
-  margin-top: 0 !important;
+  margin-top: $reset !important;
   margin-bottom: 3rem !important;
 }
 
 #title, #first-title,
 h2 {
-  color: #a24038 !important;
+  color: $red-special !important;
   font-weight: 800 !important;
 }
 
 #carousel .container {
-  width: 100% !important;
+  width: $full !important;
 }
 #quote-carousel {
-  padding: 0 10px 30px 10px;
+  padding: $reset 10px 30px 10px;
   margin-top: 30px;
   text-align: center;
   overflow-x: hidden;
@@ -533,7 +532,7 @@ h2 {
   background: #c0c0c0;
 }
 #quote-carousel .carousel-indicators .active {
-  background: #333333;
+  background: $special-gray;
   height: 10px;
   width: 10px;
   margin-bottom: 1px;
@@ -616,7 +615,7 @@ h2 {
 
 #lampadina{
 	font-size: 5rem;
-	color: #a24038;
+	color: $red-special;
 }
 
 
@@ -624,14 +623,14 @@ h2 {
 
 
 .body{
-	background-color: #333333 !important;
+	background-color: $special-gray !important;
 	background-image: none;
-	color: #ff6759 !important;
+	color: $third-red-special !important;
 }
 
 
 .footerdark{
-	background-color: #282727 !important;
-	color: #ff6759 !important;
+	background-color: $second-special-gray !important;
+	color: $third-red-special !important;
 
 }
